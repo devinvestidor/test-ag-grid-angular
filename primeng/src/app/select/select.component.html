@@ -1,0 +1,27 @@
+<div class="card flex justify-content-center">
+  <form [formGroup]="formGroup">
+    <div style="width: 50%">
+      <h3>Cascade</h3>
+      <p-cascadeSelect
+        class="w-100"
+        formControlName="selectedCity"
+        [options]="countries"
+        optionLabel="cname"
+        optionGroupLabel="name"
+        [optionGroupChildren]="['states', 'cities']"
+        [style]="{ minWidth: '14rem' }"
+        placeholder="Select a City"
+      />
+    </div>
+
+    <h3>Multi Select</h3>
+    <p-multiSelect
+      formControlName="selectedCity2"
+      [options]="cities"
+      placeholder="Select Cities"
+      optionLabel="name"
+      display="chip"
+      [showClear]="true"
+    />
+  </form>
+</div>
